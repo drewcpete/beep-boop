@@ -1,18 +1,20 @@
 // Business Logic
-function compTalk(origNum){
-  var outArray = origNum
+var outArray = []
+
+function compTalk(origNum) {
+
 // debugger;
-  for (var i = 0; i <= outArray; i++) {
-    if (outArray[i] == "3") {
-      console.log(outArray);
+  for (var i = 0; i <= origNum; i++) {
+    if (i == 3) {
       outArray.push("I'm sorry, Ben or Elly. I'm afraid I can't do that.");
-    } else if (outArray[i] == "2") {
+    } else if (i == 2) {
       outArray.push("Boop!");
-    } else if (outArray[i] == "1") {
+    } else if (i == 1) {
       outArray.push("Beep!");
     }
   }
   return outArray;
+  console.log(outArray);
 };
 
 
