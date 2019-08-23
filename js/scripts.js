@@ -1,29 +1,31 @@
+// Business Logic
+function compTalk(numInput){
+  var outArray = [];
+// debugger;
+  for (var i = 0; i <= outArray; i++) {
+    if (i.toString() == "3") {
+      outArray.push("I'm sorry, Ben or Elly. I'm afraid I can't do that.");
+    } else if (i.toString() == "2") {
+      outArray.push("Boop!");
+    } else if (i.toString() == "1") {
+      outArray.push("Beep!");
+    }
+  }
+  return outArray;
+};
+
+
 // Front end logic
 $(document).ready(function() {
   $("form#inputForm").submit(function(event) {
-    var origNum = $("input#numberInput").val();
-        debugger;
+    event.preventDefault();
+    var origNum = parseInt($("input#numberInput").val());
+
     console.log(origNum);
-
-    var numArray = [];
-    numArray = origNum;
-    numArray = numArray.split("");
-    var output = [];
-
-    for (var i = 0; i <= numArray.length; i++) {
-      if (numArray[i] == 1) {
-        output.append("Beep!")
-      } else if (numArray[i] == 2) {
-        output.append("Boop!")
-      } else if (numArray[i] == 3) {
-        output.append("I'm sorry, Ben or Elly. I'm afraid I can't do that.")
-      }
-    }
-    $("p#textOutput").text(output);
+    var finished = compTalk(origNum);
+    console.log(finished);
+    $("p#textOutput").text(finished);
 
 
   })
-})
-
-
-// Business Logic
+});
