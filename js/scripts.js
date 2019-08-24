@@ -1,42 +1,30 @@
-// Business Logic
-
+/// Business Logic
 var outArray = []
+function compTalk(inputNum) {
 
-function compTalk(origNum) {
-  for (var i = 0; i < origNum; i++) {
-    console.log(typeof(i));
-    console.log(outArray);
-    if (i.toString().includes("3")) {
-      console.log(i);
-      outArray.push("I'm sorry, Ben or Elly. I'm afraid I can't do that.");
-
-      console.log(outArray);
-
-    } else if (i.toString().includes("2")) {
-      console.log(i);
-      outArray.push("Boop!");
-
-      console.log(outArray);
-
-    } else if (i.toString().includes("1")) {
-      console.log(i);
-      outArray.push("Beep!")
+  var outputArray = [];
+  for (var i = 0; i <= inputNum; i+= 1) {
+    if ([i] == "3") {
+      outArray.push(" I'm sorry, Ben or Elly. I'm afraid I can't do that.");
+    } else if ([i] == "2" ) {
+      outArray.push(" Boop!");
+    } else if ([i] == "1" ) {
+      outArray.push(" Beep!");
     } else {
-      return i.toString();
+      outArray.push(" " + i.toString());
     }
-  };
+  }
   return outArray;
-};
+}
 
 // Front end logic
 $(document).ready(function() {
   $("form#inputForm").submit(function(event) {
     event.preventDefault();
-    var origNum = $("input#numberInput").val().split([]);
+    var inputNum = $("input#numberInput").val()
 
-    var finished = compTalk(origNum);
-    // console.log(finished);
-    // finished = finished.join(", ")
+    var finished = compTalk(inputNum);
+
     $("p#textOutput").text(finished);
   })
 });
