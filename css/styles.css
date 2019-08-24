@@ -1,0 +1,18 @@
+.jumbotron {
+  background-image: radial-gradient(circle, #0f3362, #14397d, #2c3c97, #4b3bad, #7034c0, #9d139c, #b10078, #b60058, #8e2324, #602e06, #382a03, #1d1f0e);
+  text-align: center;;
+  max-width: auto;
+  margin-left: 25%;
+  margin-right: 25%;
+  border-radius: 25%;
+  color: lightgray;
+}
+html {
+  height: 100%;
+
+}
+body {
+  height: 100%;
+  background-image: linear-gradient(to left top, #620f3e, #712e60, #7b4a82, #8166a3, #8482c2, #6c96d8, #48a9e6, #00bcec, #00c7d5, #00cca8, #6ccc71, #b3c440);
+  font-family: monospace;:
+  }
