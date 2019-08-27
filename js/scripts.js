@@ -1,14 +1,13 @@
 /// Business Logic
-var outArray = []
-function compTalk(inputNum) {
 
-  var outputArray = [];
-  for (var i = 0; i <= inputNum; i+= 1) {
-    if ([i] == "3") {
+function compTalk(inputNum) {
+  var outArray = [];
+  for (var i = 0; i <= inputNum; i++) {
+    if (i.toString().includes("3")) {
       outArray.push(" I'm sorry, Ben or Elly. I'm afraid I can't do that.");
-    } else if ([i] == "2" ) {
+    } else if (i.toString().includes("2")) {
       outArray.push(" Boop!");
-    } else if ([i] == "1" ) {
+    } else if (i.toString().includes("1")) {
       outArray.push(" Beep!");
     } else {
       outArray.push(" " + i.toString());
